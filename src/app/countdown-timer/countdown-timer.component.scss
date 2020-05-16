@@ -1,0 +1,68 @@
+.countdown-timer-main-div {
+    background-color: black;
+    color: white;
+    width: 97vw;
+    height: 97vh;
+    overflow: hidden;
+    .title {
+      width: 100%;
+      color: white;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 2vw;
+      letter-spacing: 0.3em;
+      font-weight: 300;
+      font-variant-caps: all-petite-caps;
+    }
+    .subtitle {
+      color: red;
+      text-align: center;
+      font-size: 2vw;
+      letter-spacing: 0.3em;
+      font-weight: 300;
+    }
+    .countdown-timer {
+      display: table-cell;
+      width: 70vh;
+      height: 65vh;
+      border: 0.2vh solid white;
+      border-radius: 100%;
+      position: relative;
+  
+      .radial,
+      .radial-seconds {
+        position: absolute;
+        width: 45%;
+        height: 0.1vh;
+        top: 50%;
+        left: 50%;
+        border-bottom: 0.2vh solid white;
+        //transform: rotateZ(90deg);
+        transform-origin: left;
+      }
+  
+      .radial-seconds {
+        width: 35%;
+        border-bottom: 0.2vh solid red;
+      }
+      
+    }
+  }
+  
+  .digits {
+    font-size: 1.3vw;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    line-height: 4vw;
+    font-variant-caps: all-petite-caps;
+  }
+  
+  .laps {
+    color: red;
+    font-size: 1.3vw;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    line-height: 4vw;
+    font-variant-caps: all-petite-caps;
+  }
+  

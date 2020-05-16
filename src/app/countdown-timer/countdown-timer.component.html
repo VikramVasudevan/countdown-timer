@@ -1,0 +1,44 @@
+<!--<button mat-raised-button color="warn" (click)="done = !done">Done</button>-->
+<div class="countdown-timer-main-div" fxLayout="column" fxLayoutAlign="center center" libParticleEffectButton
+    [pType]="'triangle'" [pStyle]="'stroke'" [pDuration]="700" [pDirection]="'left'" [pHidden]="!loaded"
+    [pColor]="'white'">
+    <ng-container *ngIf="loaded">
+        <div class="title" libParticleEffectButton [pType]="'triangle'" [pStyle]="'stroke'" [pDuration]="700"
+            [pDirection]="'left'" [pHidden]="!done" [pColor]="'white'">.</div>
+        <!--<ng-container *ngIf="!done">-->
+        <div class="title" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="2vw" libParticleEffectButton
+            [pType]="'triangle'" [pStyle]="'stroke'" [pDuration]="700" [pDirection]="'left'" [pHidden]="done"
+            [pColor]="'white'">
+            <ng-container *ngIf="days >= 1">
+                <span>to wait: </span>
+                <span> {{days | number : '2.0'}} </span>
+                <span *ngIf="days == 1">day</span>
+                <span *ngIf="days > 1">days</span>
+            </ng-container>
+            <div fxLayout="column">
+            <span> {{hours | number : '2.0'}}:{{minutes  | number : '2.0'}}:{{seconds  | number : '2.0'}}</span>
+            <span class="subtitle">till launch.</span>
+        </div>
+        </div>
+      
+        <div fxFlex="5" class="laps" libParticleEffectButton [pType]="'triangle'" [pStyle]="'stroke'" [pDuration]="700"
+            [pDirection]="'left'" [pHidden]="done" [pColor]="'red'">
+            <span *ngIf="iterations > 1">{{iterations}} laps to go.</span>
+            <!--<span *ngIf="iterations <= 1">final lap.</span>-->
+        </div>
+        <div fxLayout="column" fxLayoutAlign="center center" class="digits" libParticleEffectButton [pType]="'triangle'"
+            [pStyle]="'stroke'" [pDuration]="700" [pDirection]="'left'" [pHidden]="done" [pColor]="'black'">
+            <div fxFlex="10">0 h</div>
+            <div fxLayout="row" fxLayoutAlign="center center">
+                <div fxFlex="10">18 h</div>
+                <div class="countdown-timer">
+                    <div class="radial" [ngStyle]="dialStyle"></div>
+                    <div class="radial-seconds" [ngStyle]="secondsDialStyle"></div>
+                </div>
+                <div fxFlex="10" style="padding-left: 1.2vw;">6 h</div>
+            </div>
+            <div fxFlex="10">12 h</div>
+        </div>
+        <!--</ng-container>-->
+    </ng-container>
+</div>

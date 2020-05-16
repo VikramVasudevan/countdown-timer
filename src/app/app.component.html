@@ -1,0 +1,6 @@
+<countdown-timer *ngIf="!countdownComplete" [targetTime]="launchDate" (countdownComplete)="setCountDownComplete()">
+</countdown-timer>
+
+<div *ngIf="renderApp && countdownComplete">
+  <router-outlet></router-outlet>
+</div>
