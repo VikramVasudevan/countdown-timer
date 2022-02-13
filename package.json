@@ -31,7 +31,7 @@
     "@ngx-share/button": "^7.1.4",
     "@ngx-share/buttons": "^7.1.4",
     "@ngx-share/core": "^7.1.4",
-    "ajv": "^6.10.0",
+    "ajv": "^6.12.3",
     "angular-particle-effect-button": "0.0.42",
     "angularx-social-login": "^1.2.7",
     "aos": "^2.3.4",
